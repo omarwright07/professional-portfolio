@@ -28,7 +28,7 @@ With these points in mind, in this Challenge you’ll set yourself up for future
 ![Final verison mock up of an example of Professional Portfolio Website.](./assets/images/02-advanced-css-homework-demo.gif)
 
 ## Deployed Application
-<!-- https://omarwright07.github.io/horiseon-social-solutions -->
+https://omarwright07.github.io/professional-portfolio/
 
 ## GitHub Location
-<!-- https://github.com/omarwright07/horiseon-social-solutions -->
+https://github.com/omarwright07/professional-portfolio
