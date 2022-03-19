@@ -2,9 +2,10 @@
     --primary-color: grey;
     --secondary-color: lightgrey;
     --tertiary-color: black;
-    --title-text: 55px;
+    --title-text: 55px; 
     --large-text: 48px;
     --small-text: 18px;
+    --tiny-text: 12px;
     --border-size: 5px;
 }
 
@@ -19,6 +20,7 @@
 body {
     color: var(--secondary-color);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: white;
 }
 
 a {
@@ -51,7 +53,7 @@ section {
     margin: 30px;
     width: 200px;
     text-align: right;
-    font-size: var(--title-text);
+    font-size: var(--large-text);
     flex: 1 25%;
 }
 
@@ -105,18 +107,21 @@ header nav ul li {
     justify-content: center;
 }
 
-.hero-title {
+.hero-info {
     width: 80%;
-    padding: 5%;
+    padding: 5%;    
     text-align: center;
-    font-size: var(--title-text);
     color: var(--tertiary-color);
 }
 
-.hero-title img {
+.hero-info img {
     border: 5px solid var(--tertiary-color);
     border-radius: 50%;
     width: 30%;
+}
+
+.hero-title {
+    font-size: var(--title-text);
 }
 
 /* Work Section Style */
@@ -131,8 +136,17 @@ header nav ul li {
     padding: 0px;
 }
 
+.work-images h2 {
+    font-size: var(--small-text);
+}
+
+.work-images p {
+    margin: 5px auto;
+    font-size: var(--tiny-text);
+}
+
 .work-image {
-    width: 44%;
+    width: 42%;
     margin: 20px 20px 0px 20px;
 }
 
@@ -140,7 +154,7 @@ header nav ul li {
     padding: 10px 10px 10px 20px;
     width: max-content;
     max-width: 75%;
-    background-color: aquamarine;
+    background-color: var(--tertiary-color);
     position: relative;
     bottom: 25%;
     border-radius: 0px 10px 10px 0px;
@@ -149,7 +163,7 @@ header nav ul li {
 
 .work-image img {
     width: 100%;
-    border: 5px solid aquamarine;
+    border: 5px solid var(--tertiary-color);
     border-radius: 20px;
 }
 
@@ -172,9 +186,108 @@ header nav ul li {
 }
 
 .work-image img:hover {
-    border-color: var(--tertiary-color);
+    border-color: var(--primary-color);
 }
 
 .work-image:first-child {
     width: 98%
+}
+
+/* Media Queries */
+@media screen and (max-width: 980px) {
+  
+    :root {
+        --small-text: 24px;
+    }
+
+    .hero-info {
+        width: 90%;
+        padding: 2.5%;
+    }
+
+    .work-image {
+        width: 80%;
+        margin: 0px;
+    }
+
+    .contact-me ul {
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .contact-me li {
+        margin: 30px;
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    :root {
+        --title-text: 50px;
+    }
+
+    header {
+        padding: 20px;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+    }
+
+    .name {
+        padding: 10px 20px;
+        margin: 10px;
+        border-radius: 20px;
+    }
+
+    header nav {
+        margin: 20px;
+    }
+
+    section {
+        flex-direction: column;
+        align-items: center;
+        margin: 0px auto;
+    }
+
+    .section-title {
+        margin: 20px;
+        width: 100%;
+        text-align: center;
+        flex: 0;
+    }
+
+    .article {
+        flex-direction: column;
+        padding: 20px;
+        border-top: 5px solid var(--tertiary-color);
+        width: 80%;
+        border-left: 0;
+        flex: 0;
+    }
+}
+
+
+@media screen and (max-width: 575px) {
+
+    :root {
+        --large-text: 40px;
+        --small-text: 22px;
+        --title-text: 48px;
+    }
+
+    .work-image {
+        width: 85%;
+    }
+
+    .work-image div {
+        bottom: 40%;
+    }
+
+    .contact-me li {
+        margin: 15px;
+    }
+
 }
