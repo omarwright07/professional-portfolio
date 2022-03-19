@@ -101,7 +101,7 @@ header nav ul li {
 
 /* Hero Style */
 .hero {
-    background-image: url(/assets/images/marble_background.jpg);
+    background-image: url(../../assets/images/marble_background.jpg);
     display: flex;
     background-size: cover;
     justify-content: center;
